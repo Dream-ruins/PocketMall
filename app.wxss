@@ -1,0 +1,13 @@
+@import "./style/iconfont.wxss";
+
+/* 初始化 */
+page, view, navigator, image, swiper {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 主题色 */
+page {
+  --themeColor:#1296db;
+}
