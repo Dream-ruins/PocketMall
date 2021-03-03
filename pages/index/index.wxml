@@ -1,3 +1,10 @@
 <view class="index">
+  <!-- 搜索按钮 -->
   <SearchInput></SearchInput>
+  <!-- 轮播图 -->
+  <Swiper></Swiper>
+  <!-- 次级导航栏 -->
+  <SubNavigate></SubNavigate>
+  <!-- 商品楼层 -->
+  <Floor></Floor>
 </view>

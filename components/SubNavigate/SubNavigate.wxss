@@ -1,0 +1,12 @@
+.subnavihate-box {
+  display: flex;
+}
+
+.subnavihate-box navigator {
+  flex: 1;
+  padding: 20rpx;
+}
+
+.subnavihate-box navigator image {
+  width: 100%;
+}

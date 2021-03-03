@@ -1,0 +1,12 @@
+/* components/Swiper/Swiper.wxss */
+/* 轮播图 */
+swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+
+swiper image {
+  width: 100%;
+}
+
+/* 轮播图end */

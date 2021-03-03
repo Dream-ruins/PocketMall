@@ -1,0 +1,51 @@
+// 商品楼梯
+.floor-box {
+  .floor-group {
+
+    // 标题
+    .floor-title {
+      image {
+        width: 100%;
+      }
+
+      padding: {
+        top: 8rpx;
+      }
+    }
+
+    // 内容
+    .floor-list {
+      // 清除浮动
+      overflow: hidden;
+
+      navigator {
+        float: left;
+        width: 33.33%;
+
+        // 后四张小图片
+        &:nth-last-child(-n+4) {
+          height: 33.33vw * 386 / 232 / 2;
+
+          padding: {
+            left: 10rpx;
+          }
+        }
+
+        // 上面两张小图片
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding: {
+            bottom: 8rpx;
+          }
+        }
+
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+// 商品楼梯end

@@ -1,6 +1,9 @@
 {
   "usingComponents": {
-    "SearchInput":"../../components/SearchInput/SearchInput"
+    "SearchInput": "../../components/SearchInput/SearchInput",
+    "Swiper": "../../components/Swiper/Swiper",
+    "SubNavigate":"../../components/SubNavigate/SubNavigate",
+    "Floor":"../../components/Floor/Floor"
   },
   "navigationBarTitleText": "首页"
 }
