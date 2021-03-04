@@ -22,7 +22,7 @@ Component({
     //获取次级导航数据
     getSubNavigeteList() {
       request({
-        url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems',
+        url: "/home/catitems",
       }).then((result) => {
         this.setData({
           subNavigeteList: result.data.message

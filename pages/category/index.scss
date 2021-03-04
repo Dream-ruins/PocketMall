@@ -1,0 +1,78 @@
+page {
+  height: 100%;
+}
+
+.category {
+  height: 100%;
+
+  .category-container {
+    height: calc(100vh - 90rpx);
+    display: flex;
+
+    // 左侧分类
+    .left-menu {
+      flex: 2;
+
+      view {
+        height: 80rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32rpx;
+      }
+
+      // 被选中分类
+      .active {
+        color: var(--themeColor);
+        font-weight: bold;
+        border-left: 4rpx solid currentColor;
+      }
+    }
+
+    // 右侧商品
+    .right-goods {
+      flex: 5;
+
+      .goods-group {
+
+        // 次级标题
+        .goods-title {
+          height: 90rpx;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          // 分隔符
+          .delimiter {
+            color: #aaa;
+            padding: 0 10rpx;
+          }
+
+          // 分类名称
+          .title-item {}
+        }
+
+        // 三级标题
+        .goods-list {
+          display: flex;
+          flex-wrap: wrap;
+
+          navigator {
+            width: 33.33%;
+            text-align: center;
+
+            // 图片
+            image {
+              width: 50%;
+            }
+
+            // 名称
+            .goods-name {
+              font-size: 28rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+}

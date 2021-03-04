@@ -1,2 +1,36 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<!-- pages/category/index.wxml -->
+<view class="category">
+  <!-- 搜索 -->
+  <SearchInput></SearchInput>
+  <!-- 分类内容 -->
+  <view class="category-container">
+    <!-- 左侧分类 -->
+    <scroll-view class="left-menu" scroll-y>
+      <view class="left-menu-item {{index===currentIndex?'active':''}}" wx:for="{{leftMenuList}}" wx:key="*this" bindtap="handleMenuItem" data-index="{{index}}">
+        {{item}}
+      </view>
+    </scroll-view>
+    <!-- 右侧商品 -->
+    <scroll-view class="right-goods" scroll-y scroll-top="{{scrollTop}}">
+      <view class="goods-group" wx:for="{{rightGoodsData}}" wx:key="index" wx:for-item="title" wx:for-index="titleIndex">
+        <!-- 次级分类 -->
+        <view class="goods-title">
+          <!-- 分隔符 -->
+          <text class="delimiter">/</text>
+          <!-- 分类名称 -->
+          <text class="title-item">{{title.cat_name}}</text>
+          <text class="delimiter">/</text>
+        </view>
+        <!-- 三级分类 -->
+        <view class="goods-list">
+          <navigator wx:for="{{title.children}}" wx:key="cat_id" wx:for-item="goods" wx:for-index="goodsIndex" url="/pages/goods_list/index?cid={{title.cat_id}}">
+            <!-- 图片 -->
+            <image src="{{goods.cat_icon}}" mode="widthFix"></image>
+            <!-- 名称 -->
+            <view class="goods-name">{{goods.cat_name}}</view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

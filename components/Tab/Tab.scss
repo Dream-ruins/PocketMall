@@ -1,0 +1,28 @@
+.tab {
+
+  // 标题
+  .tab-title {
+    display: flex;
+
+    .title-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      padding: 10rpx 0;
+    }
+  }
+
+  // 激活
+  .active {
+    color: var(--themeColor);
+    font-weight: bold;
+
+    border: {
+      bottom: 4rpx solid currentColor
+    }
+  }
+
+  //内容
+  .tab-content {}
+}

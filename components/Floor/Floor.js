@@ -21,7 +21,7 @@ Component({
   methods: {
     getFloorData() {
       request({
-        url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/floordata',
+        url: "/home/floordata",
       }).then((result) => {
         this.setData({
           floorData: result.data.message

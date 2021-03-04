@@ -1,1 +1,64 @@
-/* pages/category/index.wxss */
+page {
+  height: 100%;
+}
+
+.category {
+  height: 100%;
+}
+
+.category .category-container {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+
+.category .category-container .left-menu {
+  flex: 2;
+}
+
+.category .category-container .left-menu view {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.category .category-container .left-menu .active {
+  color: var(--themeColor);
+  font-weight: bold;
+  border-left: 4rpx solid currentColor;
+}
+
+.category .category-container .right-goods {
+  flex: 5;
+}
+
+.category .category-container .right-goods .goods-group .goods-title {
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category .category-container .right-goods .goods-group .goods-title .delimiter {
+  color: #aaa;
+  padding: 0 10rpx;
+}
+
+.category .category-container .right-goods .goods-group .goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category .category-container .right-goods .goods-group .goods-list navigator {
+  width: 33.33%;
+  text-align: center;
+}
+
+.category .category-container .right-goods .goods-group .goods-list navigator image {
+  width: 50%;
+}
+
+.category .category-container .right-goods .goods-group .goods-list navigator .goods-name {
+  font-size: 28rpx;
+}
