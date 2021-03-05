@@ -17,7 +17,11 @@
 ### 商品
 
 - 商品列表搜索："https://api-hmugo-web.itheima.net/api/public/v1/goods/search"
+
   - query 关键字 string
   - cid 分类 id string
   - pagenum 页码 number
   - pagesize 页容量 number
+
+- 商品详情："https://api-hmugo-web.itheima.net/api/public/v1/goods/detail"
+  - goods_id 商品 id number

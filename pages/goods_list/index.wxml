@@ -6,49 +6,17 @@
   <Tab tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
     <block wx:if="{{tabs[0].isActive}}">
       <view class="first-tab">
-        <navigator class="goods-item" url="">
+        <navigator class="goods-item" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" wx:for="{{goodsList}}" wx:key="goods_id">
           <!-- 左侧图片 -->
           <view class="goods-img-warp">
-            <image class="goods-img" mode="widthFix" src="http://bpic.51yuansu.com/activity/20210203/601a024908811.jpg"></image>
+            <image class="goods-img" mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:PlaceholderImg}}"></image>
           </view>
           <!-- 右侧商品信息 -->
           <view class="goods-info-warp">
             <!-- 商品信息 -->
-            <view class="goods-info">
-              哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇
-            </view>
+            <view class="goods-info">{{item.goods_name}}</view>
             <!-- 商品价格 -->
-            <view class="goods-price">$850</view>
-          </view>
-        </navigator>
-        <navigator class="goods-item" url="">
-          <!-- 左侧图片 -->
-          <view class="goods-img-warp">
-            <image class="goods-img" mode="widthFix" src="http://bpic.51yuansu.com/activity/20210203/601a024908811.jpg"></image>
-          </view>
-          <!-- 右侧商品信息 -->
-          <view class="goods-info-warp">
-            <!-- 商品信息 -->
-            <view class="goods-info">
-              哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇
-            </view>
-            <!-- 商品价格 -->
-            <view class="goods-price">$850</view>
-          </view>
-        </navigator>
-        <navigator class="goods-item" url="">
-          <!-- 左侧图片 -->
-          <view class="goods-img-warp">
-            <image class="goods-img" mode="widthFix" src="http://bpic.51yuansu.com/activity/20210203/601a024908811.jpg"></image>
-          </view>
-          <!-- 右侧商品信息 -->
-          <view class="goods-info-warp">
-            <!-- 商品信息 -->
-            <view class="goods-info">
-              哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇
-            </view>
-            <!-- 商品价格 -->
-            <view class="goods-price">$850</view>
+            <view class="goods-price">{{item.goods_price}}</view>
           </view>
         </navigator>
       </view>

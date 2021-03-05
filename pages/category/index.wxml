@@ -23,7 +23,7 @@
         </view>
         <!-- 三级分类 -->
         <view class="goods-list">
-          <navigator wx:for="{{title.children}}" wx:key="cat_id" wx:for-item="goods" wx:for-index="goodsIndex" url="/pages/goods_list/index?cid={{title.cat_id}}">
+          <navigator wx:for="{{title.children}}" wx:key="cat_id" wx:for-item="goods" wx:for-index="goodsIndex" url="/pages/goods_list/index?cid={{goods.cat_id}}">
             <!-- 图片 -->
             <image src="{{goods.cat_icon}}" mode="widthFix"></image>
             <!-- 名称 -->

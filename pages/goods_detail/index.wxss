@@ -1,1 +1,112 @@
-/* pages/goods_detail/index.wxss */
+page {
+  padding-bottom: 90rpx;
+}
+
+.goods-detail .swiper-container swiper {
+  height: 54vw;
+  text-align: center;
+}
+
+.goods-detail .swiper-container swiper swiper-item image {
+  width: 50%;
+}
+
+.goods-detail .goods-name-container .goods-price {
+  color: #cc1010;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.goods-detail .goods-name-container .goods-name-warp {
+  display: flex;
+  box-shadow: 1px 2px 4px 1px #ccc;
+  border: 0px 8rpx;
+}
+
+.goods-detail .goods-name-container .goods-name-warp .goods-name {
+  flex: 5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 32rpx;
+  padding: 5rpx 10rpx;
+}
+
+.goods-detail .goods-name-container .goods-name-warp .goods-collect {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 1px solid #666;
+}
+
+.goods-detail .goods-name-container .goods-name-warp .goods-collect .cllect-icon {
+  font-size: 42rpx;
+  color: #ccc;
+}
+
+.goods-detail .goods-name-container .goods-name-warp .goods-collect .collect-text {
+  font-size: 24rpx;
+}
+
+.goods-detail .goods-info-container .goods-info-title {
+  height: 60rpx;
+  padding: 4rpx 20rpx;
+  font-size: 38rpx;
+  color: var(--themeColor);
+  border-bottom: 2px solid #666;
+}
+
+.goods-detail .tool-bottom {
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 2px 1px #ccc;
+}
+
+.goods-detail .tool-bottom .tool-item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.goods-detail .tool-bottom .tool-item .item-icon {
+  font-size: 38rpx;
+}
+
+.goods-detail .tool-bottom .tool-item .item-title {
+  font-size: 24rpx;
+}
+
+.goods-detail .tool-bottom .tool-item button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.goods-detail .tool-bottom .tool-add-cart {
+  flex: 2;
+  background: #ff7a00;
+  color: #fff;
+}
+
+.goods-detail .tool-bottom .tool-buy {
+  flex: 2;
+  background: #df3033;
+  color: #fff;
+}

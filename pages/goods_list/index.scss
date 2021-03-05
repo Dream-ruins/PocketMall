@@ -2,7 +2,8 @@
   .first-tab {
     .goods-item {
       display: flex;
-      min-height: 180rpx;
+      min-height: 210rpx;
+      max-height: 240rpx;
 
       border: {
         bottom: 2rpx solid #ddd;
