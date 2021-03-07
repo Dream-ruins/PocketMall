@@ -3,12 +3,12 @@
   <view class="floor-group" wx:for="{{floorData}}" wx:key="index" wx:for-item="group" wx:for-index="groupIndex">
     <!-- 标题 -->
     <view class="floor-title">
-      <image src="{{group.floor_title.image_src}}" name="{{group.floor_title.name}}" mode="widthFix"></image>
+      <image class="floor-list-title" src="{{group.floor_title.image_src}}" name="{{group.floor_title.name}}" mode="widthFix"></image>
     </view>
     <!-- 内容 -->
     <view class="floor-list">
-      <navigator wx:for="{{group.product_list}}" wx:key="name" wx:for-item="list" wx:for-index="listIndex">
-        <image src="{{list.image_src}}" name="{{list.name}}" mode="{{listIndex===0?'widthFix':'scaleToFill'}}"></image>
+      <navigator class="floor-list-nav" wx:for="{{group.product_list}}" wx:key="name" wx:for-item="list" wx:for-index="listIndex">
+        <image class="floor-list-img" src="{{list.image_src}}" name="{{list.name}}" mode="{{listIndex===0?'widthFix':'scaleToFill'}}"></image>
       </navigator>
     </view>
   </view>

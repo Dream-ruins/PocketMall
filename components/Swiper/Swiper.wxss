@@ -1,11 +1,11 @@
 /* components/Swiper/Swiper.wxss */
 /* 轮播图 */
-swiper {
+.swiper {
   width: 750rpx;
   height: 340rpx;
 }
 
-swiper image {
+.swiper .swiper-img {
   width: 100%;
 }
 

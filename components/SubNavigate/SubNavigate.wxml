@@ -1,7 +1,6 @@
 <!-- components/SubNavigate/SubNavigate.wxml -->
 <view class="subnavihate-box">
-  <navigator wx:for="{{subNavigeteList}}" wx:key="imgId">
-    <image src="{{item.image_src}}" name="{{item.name}}" mode="widthFix">
-    </image>
+  <navigator class="subnavihate-nav" wx:for="{{subNavigeteList}}" wx:key="imgId">
+    <image class="subnavihate-img" src="{{item.image_src}}" name="{{item.name}}" mode="widthFix"></image>
   </navigator>
 </view>

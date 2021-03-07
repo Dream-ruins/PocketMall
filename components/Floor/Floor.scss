@@ -4,7 +4,7 @@
 
     // 标题
     .floor-title {
-      image {
+      .floor-list-title {
         width: 100%;
       }
 
@@ -18,7 +18,7 @@
       // 清除浮动
       overflow: hidden;
 
-      navigator {
+      .floor-list-nav {
         float: left;
         width: 33.33%;
 
@@ -39,7 +39,7 @@
           }
         }
 
-        image {
+        .floor-list-img {
           width: 100%;
           height: 100%;
         }

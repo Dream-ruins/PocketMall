@@ -1,11 +1,11 @@
 .subnavihate-box {
   display: flex;
 
-  navigator {
+  .subnavihate-nav {
     flex: 1;
     padding: 20rpx;
 
-    image {
+    .subnavihate-img {
       width: 100%;
     }
   }

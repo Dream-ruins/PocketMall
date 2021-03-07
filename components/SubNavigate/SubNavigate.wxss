@@ -2,11 +2,11 @@
   display: flex;
 }
 
-.subnavihate-box navigator {
+.subnavihate-box .subnavihate-nav {
   flex: 1;
   padding: 20rpx;
 }
 
-.subnavihate-box navigator image {
+.subnavihate-box .subnavihate-nav .subnavihate-img {
   width: 100%;
 }
