@@ -1,0 +1,214 @@
+.cart {
+
+  // 收货地址
+  .addres-container {
+    width: 100%;
+    padding: 20rpx;
+
+    // 按钮
+    .addres-row {
+      button {
+        width: 60%;
+      }
+    }
+
+    // 地址信息
+    .addres-info-container {
+      font-size: 32rpx;
+
+      // 上部分
+      .addres-info-top {
+        display: flex;
+
+        // 收货人
+        .info-name {
+          flex: 2;
+
+        }
+
+        // 电话号码
+        .info-telnumber {
+          flex: 3;
+          text-align: right;
+        }
+
+      }
+
+      // 收货地址
+      .info-addres {}
+    }
+
+  }
+
+  // 购物车列表
+  .cart-container {
+
+    // 标题
+    .cart-title {
+      height: 90rpx;
+
+      border: {
+        top: 1px solid #aa6e6c;
+        bottom: 1px solid #aa6e6c;
+      }
+
+      padding: {
+        left: 8rpx
+      }
+
+      line-height: 90rpx;
+    }
+
+    // 购物车商品列表
+    .cart-list {
+
+      // 没有商品
+      .null-img {}
+
+      // 商品
+      .cart-item {
+        min-height: 180rpx;
+        display: flex;
+        padding: 8rpx;
+
+        border: {
+          bottom: 1px solid #ccc;
+        }
+
+        // 选择框
+        .cart-chk-warp {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          checkbox-group {
+            checkbox {}
+          }
+        }
+
+        // 图片
+        .cart-img-warp {
+          flex: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          image {
+            width: 70%;
+          }
+        }
+
+        // 信息
+        .cart-info-warp {
+          flex: 4;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          // 商品名称
+          .info-name {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            font-size: 28rpx;
+            color: #666;
+          }
+
+          .info-price-row {
+            display: flex;
+            justify-content: space-between;
+
+            // 商品价格
+            .info-price {
+              font-size: 42rpx;
+              color: #cc1010;
+            }
+
+            // 数量
+            .num-tool {
+              display: flex;
+
+              // 加减号
+              .tool-edit {
+                height: 54rpx;
+                width: 54rpx;
+                border: 1px solid #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              // 数值
+              .tool-num {
+                height: 54rpx;
+                width: 54rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #333;
+                font-size: 28rpx;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 底部工具栏
+  .bottom-tool {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 90rpx;
+    width: 100%;
+    display: flex;
+
+    // 全选框
+    .tool-chk {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .check {}
+
+      .text {
+        font-size: 26rpx;
+        color: #666;
+      }
+    }
+
+    // 价格
+    .tool-price-wrap {
+      flex: 2;
+      text-align: right;
+      padding-right: 4px;
+
+      .tool-price-row {
+        .text {}
+
+        .price {
+          color: #cc1010;
+        }
+      }
+
+      .tool-subtext {
+        font-size: 24rpx;
+        color: #666;
+      }
+    }
+
+    // 结算
+    .sellect {
+      flex: 1;
+      background: #df3033;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

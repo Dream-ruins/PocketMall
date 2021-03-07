@@ -21,13 +21,7 @@ Page({
     }).then((result) => {
       let goodsInfo = result.data.message;
       this.setData({
-        goodsInfo: {
-          goods_id: goodsInfo.goods_id,
-          goods_name: goodsInfo.goods_name,
-          goods_price: goodsInfo.goods_price,
-          pics: goodsInfo.pics,
-          goods_introduce: goodsInfo.goods_introduce
-        }
+        goodsInfo
       })
     })
   },
@@ -50,6 +44,8 @@ Page({
     if (index === -1) {
       // 如果不存在
       this.data.goodsInfo.num = 1;
+      // 是否选中
+      this.data.goodsInfo.checked = true;
       cart.push(this.data.goodsInfo);
     } else {
       // 如果存在增加购买数量

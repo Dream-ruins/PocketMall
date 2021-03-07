@@ -11,7 +11,13 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "购物车",
+          "pathName": "pages/cart/index",
+          "scene": null
+        }
+      ]
     }
   }
 }

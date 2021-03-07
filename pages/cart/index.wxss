@@ -1,1 +1,152 @@
-/* pages/cart/index.wxss */
+.cart .addres-container {
+  width: 100%;
+  padding: 20rpx;
+}
+
+.cart .addres-container .addres-row button {
+  width: 60%;
+}
+
+.cart .addres-container .addres-info-container {
+  font-size: 32rpx;
+}
+
+.cart .addres-container .addres-info-container .addres-info-top {
+  display: flex;
+}
+
+.cart .addres-container .addres-info-container .addres-info-top .info-name {
+  flex: 2;
+}
+
+.cart .addres-container .addres-info-container .addres-info-top .info-telnumber {
+  flex: 3;
+  text-align: right;
+}
+
+.cart .cart-container .cart-title {
+  height: 90rpx;
+  border-top: 1px solid #aa6e6c;
+  border-bottom: 1px solid #aa6e6c;
+  padding-left: 8rpx;
+  line-height: 90rpx;
+}
+
+.cart .cart-container .cart-list .cart-item {
+  min-height: 180rpx;
+  display: flex;
+  padding: 8rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-chk-warp {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-img-warp {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-img-warp image {
+  width: 70%;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-info-warp {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-info-warp .info-name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-info-warp .info-price-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-info-warp .info-price-row .info-price {
+  font-size: 42rpx;
+  color: #cc1010;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-info-warp .info-price-row .num-tool {
+  display: flex;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-info-warp .info-price-row .num-tool .tool-edit {
+  height: 54rpx;
+  width: 54rpx;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart .cart-container .cart-list .cart-item .cart-info-warp .info-price-row .num-tool .tool-num {
+  height: 54rpx;
+  width: 54rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.cart .bottom-tool {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+}
+
+.cart .bottom-tool .tool-chk {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart .bottom-tool .tool-chk .text {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.cart .bottom-tool .tool-price-wrap {
+  flex: 2;
+  text-align: right;
+  padding-right: 4px;
+}
+
+.cart .bottom-tool .tool-price-wrap .tool-price-row .price {
+  color: #cc1010;
+}
+
+.cart .bottom-tool .tool-price-wrap .tool-subtext {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.cart .bottom-tool .sellect {
+  flex: 1;
+  background: #df3033;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

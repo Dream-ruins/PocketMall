@@ -1,2 +1,90 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- pages/cart/index.wxml -->
+<view class="cart">
+  <!-- 收货地址 -->
+  <view class="addres-container">
+    <!-- 按钮 -->
+    <view class="addres-row" wx:if="{{!addres.userName}}">
+      <button class="addres-btn" type="primary" plain bindtap="handleChooseAddres">填写收货地址</button>
+    </view>
+    <!-- 地址信息 -->
+    <view class="addres-info-container" wx:else>
+      <view class="addres-info-top">
+        <!-- 收货人 -->
+        <view class="info-name">收货人：{{addres.userName}}</view>
+        <!-- 电话号码 -->
+        <view class="info-telnumber">电话号码：{{addres.telNumber}}</view>
+      </view>
+      <!-- 收货地址 -->
+      <view class="info-addres">地址：{{addres.all}}</view>
+    </view>
+  </view>
+  <!-- 购物车列表 -->
+  <view class="cart-container">
+    <!-- 标题 -->
+    <view class="cart-title">购物车</view>
+    <!-- 购物车商品列表 -->
+    <view class="cart-list">
+      <!-- 商品 -->
+      <block wx:if="{{cart.length!=0}}">
+        <view class="cart-item" wx:for="{{cart}}" wx:key="goods_id">
+          <!-- 选择框 -->
+          <view class="cart-chk-warp">
+            <checkbox-group bindchange="changeChecked" data-id="{{item.goods_id}}">
+              <checkbox class="" checked="{{item.checked}}"></checkbox>
+            </checkbox-group>
+          </view>
+          <!-- 图片 -->
+          <view class="cart-img-warp">
+            <image class="" src="{{item.goods_small_logo?item.goods_small_logo:PlaceholderImg}}" mode="widthFix"></image>
+          </view>
+          <!-- 信息 -->
+          <view class="cart-info-warp">
+            <!-- 商品名称 -->
+            <view class="info-name">{{item.goods_name}}</view>
+            <view class="info-price-row">
+              <!-- 商品价格 -->
+              <view class="info-price">￥{{item.goods_price}}</view>
+              <!-- 数量 -->
+              <view class="num-tool">
+                <!-- 减号 -->
+                <view class="tool-edit" bindtap="changeGoodsNum" data-id="{{item.goods_id}}" data-operation="{{-1}}">
+                  -
+                </view>
+                <!-- 数值 -->
+                <view class="tool-num">{{item.num}}</view>
+                <!-- 加号 -->
+                <view class="tool-edit" bindtap="changeGoodsNum" data-id="{{item.goods_id}}" data-operation="{{1}}">
+                  +
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <!-- 没有商品 -->
+      <block wx:else>
+        <image class="null-img" src="http://pic.51yuansu.com/pic3/cover/01/55/70/594c83da6e5d3_610.jpg" mode="widthFix"></image>
+      </block>
+    </view>
+  </view>
+  <!-- 底部工具栏 -->
+  <view class="bottom-tool">
+    <!-- 全选 -->
+    <view class="tool-chk">
+      <checkbox-group bindchange="changeAllChecked">
+        <checkbox class="check" checked="{{allChecked}}"></checkbox>
+        <text class="text">全选</text>
+      </checkbox-group>
+    </view>
+    <!-- 价格 -->
+    <view class="tool-price-wrap">
+      <view class="tool-price-row">
+        <text class="text">合计:</text>
+        <text class="price">￥{{totalPrice}}</text>
+      </view>
+      <view class="tool-subtext">包含运费</view>
+    </view>
+    <!-- 结算 -->
+    <view class="sellect" bindtap="handlePay">结算({{totalNum}})</view>
+  </view>
+</view>
